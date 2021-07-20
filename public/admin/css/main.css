@@ -1,0 +1,15 @@
+.area-image{
+    margin-bottom: 8px;
+}
+.area-image img{
+    width: 40%;
+}
+.table td img{
+    border-radius: 0%;
+    width: 50%;
+    height: inherit;
+}
+.validate-warning{
+    font-size: 13px;
+    color: red;
+}

@@ -1,0 +1,21 @@
+.header-func{
+    padding-top: 24px;
+    padding-right: 0;
+}
+.header-func span{
+    color: red;
+    font-weight: bolder;
+    opacity: 0.8;
+}
+.header-func .row{
+    text-align: center;
+}
+.table-choise-person{
+    text-align: center;
+}
+.table-choise-person tbody tr td{
+    padding: 8px 8px;
+}
+.label-passeger{
+    margin-left: 12px;
+}
