@@ -13,9 +13,10 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Id</th>
+                                <th>#</th>
                                 <th>Tên danh mục</th>
                                 <th>Ảnh</th>
+                                <th>Số lượng tour</th>
                                 <th colspan="2" class="text-center">Chức năng</th>
                             </tr>
                         </thead>
@@ -25,11 +26,14 @@
                                 <td style="width:100px;">
                                     {{$item->id}}
                                 </td>
-                                <td style="width:200px;">
+                                <td style="width:100;">
                                     {{$item->name}}
                                 </td>
                                 <td style="width:300px;">
                                     <img src="{{config('global.APP_URL').$item->image}}" alt="" />
+                                </td>
+                                <td style="width:100;">
+                                    {{$item->tours()->count()}}
                                 </td>
                                 <td class="text-center" style="width:200px;">
                                     <a class="text-decoration-none" href="{{route('admin.category.edit',['id'=>$item->id])}}">

@@ -11,12 +11,18 @@
                     <div class="form-group">
                         <label for="exampleInputName1">Tên tour</label>
                         <input type="text" class="form-control" id="exampleInputName1" name="name" placeholder="Nhập tên tour" value="{{$data->name}}">
+                        @error('name')
+                        <span id="check-name" class="validate-warning">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <div class="row">
                             <div class="col-4">
                                 <label for="inpTravelDay">Nhập số ngày đi</label>
                                 <input type="number" class="form-control" name="travel_day" id="inpTravelDay" value="{{$data->travel_day}}" />
+                                @error('travel_day')
+                                    <span id="check-name" class="validate-warning">{{$message}}</span>
+                                @enderror
                             </div>
                             <div class="col-4">
                                 <label for="inpPrice">Giá</label>
@@ -29,6 +35,9 @@
                                         <span class="input-group-text">triệu</span>
                                     </div>
                                 </div>
+                                @error('price')
+                                    <span id="check-name" class="validate-warning">{{$message}}</span>
+                                @enderror
                             </div>
                             <div class="col-4">
                                 <label for="inpCategory">Chọn danh mục</label>
@@ -58,11 +67,17 @@
                             </span>
                             <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
                         </div>
+                        @error('image')
+                            <span id="check-name" class="validate-warning">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="inpDeparture"><b>Địa điểm xuất phát</b></label>
                         <input class="form-control" id="inpDeparture" 
                                name="departure_place" placeholder="Ví dụ: Hà Nội" value="{{$data->departure_place}}"/>
+                               @error('departure_place')
+                            <span id="check-name" class="validate-warning">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="inpDes"><b>Miêu tả ngắn</b></label>
@@ -72,7 +87,8 @@
                         <label for="inpSche"><b>Lịch trình</b></label>
                         <textarea class="form-control" id="inpSche" name="schedule" rows="4">{{$data->schedule}}</textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary mr-2">Tạo</button>
+                    <input type="hidden" name="id" value="{{$data->id}}">
+                    <button type="submit" class="btn btn-primary mr-2">Thay đổi</button>
                     <button class="btn btn-light" type="reset">Đặt lại</button>
                 </form>
             </div>

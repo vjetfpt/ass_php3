@@ -7,13 +7,13 @@
             </a>
         </li>
         <li class="nav-item side-item" id="category">
-            <a class="nav-link" href="{{route('admin.category.show')}}">
+            <a class="nav-link" href="{{route('admin.category.index')}}">
                 <i class="mdi mdi-view-headline menu-icon"></i>
                 <span class="menu-title">Danh mục</span>
             </a>
         </li>
         <li class="nav-item side-item" id="tour">
-            <a class="nav-link" href="{{route('admin.tour.show')}}">
+            <a class="nav-link" href="{{route('admin.tour.index')}}">
                 <i class="mdi mdi-subway menu-icon"></i>
                 <span class="menu-title">Tours</span>
             </a>

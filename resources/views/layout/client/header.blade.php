@@ -2,21 +2,28 @@
     <div class='container hidden-xs'>
         <div class='row'>
             <div class='col-sm-2'>
-                <div id='container-logo'> <a href='index.html'><img src='client/image/catalog/logo/logo.png' alt='ETravel Tours - Đi để trải nghiệm ' class='img-responsive' id='logo' /></a> </div>
+                <div id='container-logo'>
+                    <a href='{{config('global.APP_URL')}}'>
+                        <img src='/client/image/catalog/logo/logo.png' alt='ETravel Tours - Đi để trải nghiệm ' class='img-responsive' id='logo' /></a>
+                    </div>
             </div>
             <div class='col-sm-6'>
                 <div class='row'>
                     <div class="row hidden-xs">
                         <div class="col-sm-12 col-xs-12">
                             <ul class="sf-menu" id="example">
-                                <li> <a href="index.html">Trang chủ</a> </li>
+                                <li> <a href="{{config('global.APP_URL')}}">Trang chủ</a> </li>
                                 <li> <a href="gioi-thieu.html">Về ETravel Tours</a> </li>
                                 <li>
                                     <a href="">Danh mục</a>
                                     <ul class="menu-multi-level">
-                                        <li> <a href="tour-chau-a.html">Tour Châu Á</a> </li>
-                                        <li> <a href="tour-chau-au.html">Tour Châu Âu</a> </li>
-                                        <li> <a href="tour-chau-my.html">Tour Châu Mỹ</a> </li>
+                                        @foreach($listCate as $cate)
+                                        <li> 
+                                            <a href="{{route('client.category.tour',['id'=>$cate->id])}}">
+                                                {{$cate['name']}}
+                                            </a>
+                                        </li>
+                                        @endforeach
                                     </ul>
                                 </li>
                                 <li> <a href="cam-nang-du-lich.html">Cẩm nang du lịch</a> </li>

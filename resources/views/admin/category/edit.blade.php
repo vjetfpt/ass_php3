@@ -10,12 +10,17 @@
                     @csrf
                     <div class="form-group">
                         <label for="exampleInputName1">Tên danh mục</label>
-                        <input type="text" name="name" class="form-control" value="{{$data->name}}" id="exampleInputName1" placeholder="Tên danh mục">
+                        <input type="text" name="name" class="form-control" 
+                               value="@if(!empty(old('name'))){{old('name')}}@else{{$data->name}}@endif" 
+                               id="exampleInputName1" placeholder="Tên danh mục">
+                        @error('name')
+                        <span id="check-name" class="validate-warning">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Ảnh đại diện</label>
                         <div class="area-image">
-                        <img src="{{URL($data->image)}}" alt="Chưa có ảnh"/>
+                            <img src="{{URL($data->image)}}" alt="Chưa có ảnh" />
                         </div>
                         <input type="file" name="image" class="file-upload-default">
                         <div class="input-group col-xs-12">
@@ -23,7 +28,11 @@
                                 <button class="file-upload-browse btn btn-inverse-success btn-fw" type="button">Tải lên</button>
                             </span>
                         </div>
+                        @error('image')
+                        <span id="check-name" class="validate-warning">{{$message}}</span>
+                        @enderror
                     </div>
+                    <input type="hidden" name="id" value="{{$data->id}}">
                     <button type="submit" class="btn btn-primary mr-2">Thêm mới</button>
                 </form>
             </div>

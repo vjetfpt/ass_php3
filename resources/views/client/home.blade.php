@@ -19,20 +19,25 @@
 <div class="service-home text-center module_category product_category" id="product_category-1">
     <h3 class="heading-title">Dịch vụ tốt nhất của ETravel Tours</h3>
     <div class="container">
+        @if(!empty($listCate))
+        @for($i=0;$i<3;$i++)
         <div class="col-sm-4 col-xs-12">
-            <div class="cat-image"> <a href="tour-chau-au.html"> <img src="client/image/cache/catalog/categories/home-cis01-600x400.jpg" alt="Tour Châu Âu" class="img-responsive" /></a> </div>
-            <div class="cat-name"> <a href="tour-chau-au.html">Tour Châu Âu</a> </div>
+            <div class="cat-image">
+                <a href="{{route('client.category.tour',['id'=>$listCate[$i]])}}">
+                    <img src="{{config('global.APP_URL').$listCate[$i]->image}}" alt="{{$listCate[$i]->name}}" class="img-responsive" />
+                </a>
+            </div>
+            <div class="cat-name"> 
+                <a href="{{route('client.category.tour',['id'=>$listCate[$i]])}}">{{$listCate[$i]->name}}</a> 
+            </div>
         </div>
-        <div class="col-sm-4 col-xs-12">
-            <div class="cat-image"> <a href="tour-chau-a.html"> <img src="client/image/cache/catalog/categories/home-cis02-600x400.jpg" alt="Tour Châu Á" class="img-responsive" /></a> </div>
-            <div class="cat-name"> <a href="tour-chau-a.html">Tour Châu Á</a> </div>
-        </div>
-        <div class="col-sm-4 col-xs-12">
-            <div class="cat-image"> <a href="tour-chau-my.html"> <img src="client/image/cache/catalog/categories/home-cis03-600x400.jpg" alt="Tour Châu Mỹ" class="img-responsive" /></a> </div>
-            <div class="cat-name"> <a href="tour-chau-my.html">Tour Châu Mỹ</a> </div>
-        </div>
+        @endfor
+        @else
+        <p>Hiện tại chưa có danh mục nào</p>
+        @endif
         <div class="clearfix"></div>
     </div>
+</div>
 </div>
 <div class="tour-home product_module product_mostviewed" id="product_mostviewed-0" style="background-image: url('client/image/catalog/banner/home-customer-bg.jpg')">
     <div class="container">
