@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\DB;
 Route::get('/','Client\HomeController@index')->name('client.home.index');
 Route::get('danh-muc/{id}','Client\CategoryController@show')->name('client.category.tour');
 Route::get('tour/{tour}','Client\TourController@show')->name('client.tour');
+Route::get('cart','Client\TourController@cart')->name('client.cart');
 //Admin
 Route::get('/admin/home', function () {
     return view('/admin/home/index');
@@ -50,6 +51,28 @@ Route::group(
             Route::get('edit/{id}','TourController@edit')->name('edit');
             Route::post('edit/{id}','TourController@update')->name('update');
             Route::get('delete/{id}','TourController@delete')->name('delete');
+        });
+        Route::group([
+            'prefix' => 'user',
+            'as' => 'user.',
+        ], function () {
+            Route::get('/','UserController@index')->name('index');
+            Route::get('create','UserController@create')->name('create');
+            Route::post('store','UserController@store')->name('store');
+            Route::get('edit/{user}','UserController@edit')->name('edit');
+            Route::post('edit/{user}','UserController@update')->name('update');
+            Route::post('delete/{user}','UserController@delete')->name('delete');
+        });
+        Route::group([
+            'prefix' => 'order',
+            'as' => 'order.',
+        ], function () {
+            Route::get('/','OrderController@index')->name('index');
+            Route::get('create','OrderController@create')->name('create');
+            Route::post('store','OrderController@store')->name('store');
+            Route::get('edit/{user}','OrderController@edit')->name('edit');
+            Route::post('edit/{user}','OrderController@update')->name('update');
+            Route::post('delete/{user}','OrderController@delete')->name('delete');
         });
     }
 );

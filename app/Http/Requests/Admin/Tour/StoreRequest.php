@@ -4,6 +4,7 @@ namespace App\Http\Requests\Admin\Tour;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Request;
+use App\Rules\checkImageOnTours;
 class StoreRequest extends FormRequest
 {
     /**
@@ -23,14 +24,15 @@ class StoreRequest extends FormRequest
      */
     public function rules(Request $request)
     {
+
         $check_id=isset($request->id)?",$request->id":"";
-        $check_img = isset($request->id)?"":"|required";
+        // $check_img = isset($request->id)?"":"|required";
         return [
             'name'=>'required|min:1|max:400|unique:tours,name'.$check_id,
             'price'=>'required|numeric|between:1,500000000',
             'travel_day'=>'required|numeric|between:1,400',
             'departure_place'=>'required|min:1|max:500',
-            'image'=>'image'.$check_img
+            'image'=>new checkImageOnTours()
         ];
     }
     public function messages()
@@ -44,7 +46,7 @@ class StoreRequest extends FormRequest
             'travel_day.between'=>'Thời gian không hợp lệ',
             'departure_place.max'=>'Số ký tự nhập không hợp lệ',
             'departure_place.min'=>'Số ký tự nhập không hợp lệ',
-            'image.image'=>'File tải lên không phải định dạng ảnh'
+            // 'image.image'=>'File tải lên không phải định dạng ảnh'
         ];
     }
     public function attributes()

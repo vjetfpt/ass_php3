@@ -25,4 +25,7 @@ class Tour extends Model
     public function galleries(){
         return $this->hasMany(Gallery::class,'tour_id','id');
     }
+    public function orders(){
+        return $this->hasMany(Order::class,'tour_id','id');
+    }
 }

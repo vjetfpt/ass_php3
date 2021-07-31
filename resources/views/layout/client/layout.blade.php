@@ -4,14 +4,13 @@
 
 <head>
     <meta charset='utf-8' />
-    <link rel="dns-prefetch" href="http://fonts.googleapis.com/" />
     <link rel='stylesheet' href='/client/catalog/view/theme/etravel/stylesheet/stylesheet.min63ac.css?v=1624930764' />
-    <script type="text/javascript" src='/client/catalog/view/theme/etravel/javascript/jquery-2.2.1.min63ac.js?v=1624930764'></script>
     <link href="/client/image/catalog/logo/favicon.png" rel="icon" />
-    <link href="/client/index.html" rel="canonical" />
     <link href='/client/catalog/view/theme/etravel/stylesheet_custom/stylesheet63ac.css?v=1624930764' rel='stylesheet' />
     <link rel="stylesheet" href="/client/./css/fontawesome/all.min.css" />
-    <script src="/client/./js/fontawesome/all.min.js"></script>
+    <script type="text/javascript" src='/client/catalog/view/theme/etravel/javascript/jquery-2.2.1.min01b3.js?v=1624930782'></script>
+    <link rel="stylesheet" href="/client/./css/main.css">
+    <script src="/client/js/fontawesome/all.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             /* An hien menu mobile */
@@ -21,10 +20,11 @@
             });
         });
     </script>
+    <link rel='stylesheet' href='/client/catalog/view/theme/etravel/stylesheet/stylesheet.min01b3.css?v=1624930782' />
+    <script type="text/javascript" src='/client/catalog/view/theme/etravel/javascript/jquery-2.2.1.min01b3.js?v=1624930782'></script>
     <script src='/client/catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js' type='text/javascript'></script>
     <script src='/client/catalog/view/javascript/jquery/datetimepicker/moment.js' type='text/javascript'></script>
     <script src='/client/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js' type='text/javascript'></script>
-    <link rel="stylesheet" href="/client/./css/main.css">
 </head>
 
 <body class="common-home">

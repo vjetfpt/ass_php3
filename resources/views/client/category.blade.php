@@ -10,17 +10,17 @@
                 <div class="col-sm-4 col-xs-12">
                     <div class="tour-border">
                         <div class="tour-image">
-                            <a href="tour-thai-lan-bangkok-pattaya-trong-5-ngay-4-dem.html" title="{{$tour->name}}">
+                            <a href="{{route('client.tour',['tour'=>$tour->id])}}" title="{{$tour->name}}">
                                 <img src="{{config('global.APP_URL').$tour->img}}"
                                      class="img-responsive" alt="{{$tour->name}}" />
                             </a>
                             <div class="cover">
-                                <a href="tour-thai-lan-bangkok-pattaya-trong-5-ngay-4-dem.html">Xem</a>
+                                <a href="{{route('client.tour',['tour'=>$tour->id])}}">Xem</a>
                             </div>
                         </div>
                         <div class="tour-info">
                             <div class="tour-name">
-                                <a href="tour-thai-lan-bangkok-pattaya-trong-5-ngay-4-dem.html" title="{{$tour->name}}">
+                                <a href="{{route('client.tour',['tour'=>$tour->id])}}" title="{{$tour->name}}">
                                     <span>{{$tour->name}}</span>
                                 </a>
                             </div>

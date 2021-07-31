@@ -13,3 +13,9 @@
     font-size: 13px;
     color: red;
 }
+.inp-check-radio{
+    margin: 0 28px;
+}
+.inp-check-radio input{
+    width: 26px;
+}
