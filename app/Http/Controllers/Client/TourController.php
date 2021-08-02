@@ -26,16 +26,4 @@ class TourController extends Controller
             'listTourRelated' => $listTourRelated
         ]);
     }
-    public function cart(){
-        $request = request()->except('_token');
-        if(!session()->has('cart')){
-            echo "oke1";
-            session(['cart'=>1]);
-        }
-        else{
-            echo "oke2";
-            session()->push('cart',[$request['tour_id']=>1]);
-        }
-        dd(session()->all());
-    }
 }

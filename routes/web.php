@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\DB;
 Route::get('/','Client\HomeController@index')->name('client.home.index');
 Route::get('danh-muc/{id}','Client\CategoryController@show')->name('client.category.tour');
 Route::get('tour/{tour}','Client\TourController@show')->name('client.tour');
-Route::get('cart','Client\TourController@cart')->name('client.cart');
+Route::post('cart','Client\CartController@add')->name('client.cart.add');
+Route::get('showcart','Client\CartController@show')->name('client.cart.show');
+Route::get('deletecart\{id}','Client\CartController@delete')->name('client.cart.delete');
 //Admin
 Route::get('/admin/home', function () {
     return view('/admin/home/index');
