@@ -20,7 +20,7 @@
             });
         });
     </script>
-    <link rel='stylesheet' href='/client/catalog/view/theme/etravel/stylesheet/stylesheet.min01b3.css?v=1624930782' />
+    <!-- <link rel='stylesheet' href='/client/catalog/view/theme/etravel/stylesheet/stylesheet.min01b3.css?v=1624930782' /> -->
     <script type="text/javascript" src='/client/catalog/view/theme/etravel/javascript/jquery-2.2.1.min01b3.js?v=1624930782'></script>
     <script src='/client/catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js' type='text/javascript'></script>
     <script src='/client/catalog/view/javascript/jquery/datetimepicker/moment.js' type='text/javascript'></script>

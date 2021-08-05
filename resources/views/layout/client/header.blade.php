@@ -5,7 +5,7 @@
                 <div id='container-logo'>
                     <a href='{{config('global.APP_URL')}}'>
                         <img src='/client/image/catalog/logo/logo.png' alt='ETravel Tours - Đi để trải nghiệm ' class='img-responsive' id='logo' /></a>
-                    </div>
+                </div>
             </div>
             <div class='col-sm-6'>
                 <div class='row'>
@@ -18,7 +18,7 @@
                                     <a href="">Danh mục</a>
                                     <ul class="menu-multi-level">
                                         @foreach($listCate as $cate)
-                                        <li> 
+                                        <li>
                                             <a href="{{route('client.category.tour',['id'=>$cate->id])}}">
                                                 {{$cate['name']}}
                                             </a>
@@ -34,24 +34,40 @@
             </div>
             <div class="header-func col-sm-3">
                 <div class="row">
+                    @guest
                     <div class="col-sm-6">
                         <i class="fas fa-key"></i>
                         <a href="#">Đăng kí</a>
                     </div>
                     <div class="col-sm-6">
                         <i class="fas fa-sign-in-alt"></i>
-                        <a href="#">Đăng nhập</a>
+                        <a href="{{route('client.login')}}">Đăng nhập</a>
                     </div>
+                    @endguest
+                    @auth
+                    <p>Hello
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                    </p>
+                    @endauth
                 </div>
             </div>
             <div class="header-func col-sm-1">
                 <div class="row">
                     <div class=" col-sm-12">
-                        <a href="#">
+                        <a href="{{route('client.cart.show')}}" style="text-decoration:none;">
                             <i class="fas fa-shopping-cart" style="font-size: 25px;"></i>
                         </a>
                         <span>
-                            0
+                            {{Session::has('cart')?count(Session::get('cart')):"0"}}
                         </span>
                     </div>
                 </div>

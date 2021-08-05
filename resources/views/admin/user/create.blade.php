@@ -10,7 +10,7 @@
                 <div class="form-group">
                     <label for="exampleInputUsername1">Họ tên</label>
                     <input type="text" class="form-control" name="name" 
-                           id="exampleInputUsername1" placeholder="Nhập tên">
+                           id="exampleInputUsername1" placeholder="Nhập tên" value="{{old('name')}}" />
                     @error('name')
                         <span id="check-name" class="validate-warning">{{$message}}</span>
                     @enderror
@@ -18,7 +18,7 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
                     <input type="email" class="form-control" name="email" 
-                            id="exampleInputEmail1" placeholder="Nhập email">
+                            id="exampleInputEmail1" placeholder="Nhập email" value="{{old('email')}}">
                     @error('email')
                         <span id="check-name" class="validate-warning">{{$message}}</span>
                     @enderror
@@ -26,7 +26,8 @@
                 <div class="form-group">
                     <label for="exampleInputUsername1">Số điện thoại</label>
                     <input type="text" class="form-control" name="phone" 
-                            id="exampleInputUsername1" placeholder="Nhập số điện thoại">
+                            id="exampleInputUsername1" placeholder="Nhập số điện thoại"
+                            value="{{old('phone')}}" />
                     @error('phone')
                         <span id="check-name" class="validate-warning">{{$message}}</span>
                     @enderror
@@ -34,7 +35,8 @@
                 <div class="form-group">
                     <label for="exampleInputUsername1">Địa chỉ</label>
                     <input type="text" class="form-control" name="address" 
-                            id="exampleInputUsername1" placeholder="Nhập địa chỉ">
+                            id="exampleInputUsername1" placeholder="Nhập địa chỉ"
+                            value="{{old('address')}}"/>
                 </div>
                 <div class="form-group">
                     <b>Phần quyền</b>
@@ -61,14 +63,14 @@
                         <span id="check-name" class="validate-warning">{{$message}}</span>
                     @enderror
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="exampleInputConfirmPassword1">Xác thực mật khẩu</label>
                     <input type="password" class="form-control" name="password_confirmation"
                             id="exampleInputConfirmPassword1" placeholder="Xác thực">
                     @error('password_confirmation')
                         <span id="check-name" class="validate-warning">{{$message}}</span>
                     @enderror
-                </div>
+                </div> -->
                 <button type="submit" class="btn btn-primary mr-2">Tạo</button>
                 <button type="reset" class="btn btn-light">Đặt lại</button>
             </form>

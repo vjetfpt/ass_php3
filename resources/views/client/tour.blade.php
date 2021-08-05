@@ -36,7 +36,7 @@
                     </ul>
                     <div id="product">
                         <div class="form-group">
-                            <form action="{{route('client.cart.add')}}" method="post">
+                            <form action="{{ route('client.cart.add') }}" method="post">
                                 @csrf
                                 <button type="submit" id="button-cart" value="{{$tour->id}}"
                                       name="tour_id" class="btn btn-primary btn-lg btn-block">

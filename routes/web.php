@@ -14,12 +14,29 @@ use Illuminate\Support\Facades\DB;
 |
 */
 // Client
-Route::get('/','Client\HomeController@index')->name('client.home.index');
-Route::get('danh-muc/{id}','Client\CategoryController@show')->name('client.category.tour');
-Route::get('tour/{tour}','Client\TourController@show')->name('client.tour');
-Route::post('cart','Client\CartController@add')->name('client.cart.add');
-Route::get('showcart','Client\CartController@show')->name('client.cart.show');
-Route::get('deletecart\{id}','Client\CartController@delete')->name('client.cart.delete');
+Route::group([
+    'as'=>'client.',
+    'namespace'=>'Client'
+],function(){
+    Route::get('/','HomeController@index')->name('home.index');
+    Route::get('danh-muc/{id}','CategoryController@show')->name('category.tour');
+    Route::get('tour/{tour}','TourController@show')->name('tour');
+    Route::get('login','LoginController@index')->name('login');
+    Route::post('login','LoginController@store')->name('store');
+    Route::group([
+        'prefix'=>'cart',
+        'as'=>'cart.'
+        
+    ],function(){
+        Route::post('add','CartController@add')->name('add');
+        Route::get('show','CartController@show')->name('show');
+        Route::post('savechange','CartController@saveChange')->name('saveChange');
+        Route::get('delete/{id}','CartController@delete')->name('delete');
+        Route::get('pay','CartController@infoPay')->name('pay');
+        Route::post('store','CartController@store')->name('store');
+        Route::get('invoice/{order}','CartController@invoice')->name('invoice');
+    });
+});
 //Admin
 Route::get('/admin/home', function () {
     return view('/admin/home/index');

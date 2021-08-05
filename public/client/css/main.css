@@ -19,7 +19,18 @@
 .label-passeger{
     margin-left: 12px;
 }
-
+.area-order{
+    /* padding-left: 40px;
+    padding-right: 0; */
+}
+.show_info_tour{
+    font-size: 20px;
+    font-weight: 150;
+    line-height: 1.5;
+}
+.order-image{
+    text-align: center;
+}
 /* body{
     background-color: #F9F9F9;
 } */

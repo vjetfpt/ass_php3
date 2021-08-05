@@ -6,7 +6,8 @@
             <h3 class="heading-title">Giỏ hàng</h3>
             <div class="row">
                 <div class="col-sm-12">
-                    <form action="https://etravel.exdomain.net/checkout/cart/edit" method="post" enctype="multipart/form-data">
+                    <form action="{{route('client.cart.saveChange')}}" method="post" enctype="multipart/form-data">
+                        @csrf
                         <div class="table-responsive table-cart-content">
                             <table class="table table-bordered">
                                 <thead>
@@ -33,7 +34,8 @@
                                         </td>
                                         <td class="text-left">
                                             <div class="input-group btn-block" style="text-align:center;">
-                                                <input name="tour_selected" type="radio" @if($i==count($listTour)-1){{"checked"}}@endif />
+                                                <input name="tour_selected" type="radio" value="{{$listTour[$i]->id}}"
+                                                        @if($i==count($listTour)-1){{"checked"}}@endif />
                                             </div>
                                         </td>
                                         <td class="text-center">
@@ -48,7 +50,6 @@
                                 </tbody>
                             </table>
                         </div>
-                    </form>
                 </div>
             </div>
             <div class="row">
@@ -71,14 +72,14 @@
                             <tr>
                                 <td>Từ 5- 12 tuổi</td>
                                 <td>
-                                    <input type="number" class="form-control person-amount" name="amount_child" value="0" min="0"/>
+                                    <input type="number" class="form-control person-amount" name="amount_child1" value="0" min="0" />
                                 </td>
                                 <td>70%</td>
                             </tr>
                             <tr>
                                 <td>Từ 2-5 tuổi</td>
                                 <td>
-                                    <input type="number" class="form-control person-amount" name="amount_child2" value="0" min="0"/>
+                                    <input type="number" class="form-control person-amount" name="amount_child2" value="0" min="0" />
                                 </td>
                                 <td>46%</td>
                             </tr>
@@ -99,9 +100,12 @@
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="col-sm-6 col-xs-6 col_button_shopping"> <a href="https://etravel.exdomain.net/" class="btn btn-default pull-left button_shopping">Tiếp tục mua hàng</a> </div>
-                        <div class="col-sm-6 col-xs-6 col_button_checkout"> <a href="https://etravel.exdomain.net/thanh-toan" class="btn btn-primary pull-right button_checkout">Tiến hành thanh toán</a> </div>
+                        <div class="col-sm-6 col-xs-6 col_button_checkout"> 
+                            <button type="submit" class="btn btn-primary pull-right button_checkout">Tiến hành thanh toán</button>
+                        </div>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>

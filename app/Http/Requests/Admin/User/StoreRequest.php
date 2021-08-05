@@ -40,7 +40,6 @@ class StoreRequest extends FormRequest
             'name.max'=>'Nhập quá ký tự cho phép',
             'email.email'=>'Nhập không đúng định dạng email',
             'email.unique'=>'Email đã tồn tại',
-            'password_confirmation.confirmed'=>'Mật khẩu và xác thực mật khẩu không khớp'
         ];
     }
     public function attributes()
