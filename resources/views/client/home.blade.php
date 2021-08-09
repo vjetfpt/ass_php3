@@ -19,19 +19,19 @@
 <div class="service-home text-center module_category product_category" id="product_category-1">
     <h3 class="heading-title">Dịch vụ tốt nhất của ETravel Tours</h3>
     <div class="container">
-        @if(!empty($listCate))
-        @for($i=0;$i<3;$i++)
+        @if(!empty($listCateTake))
+        @foreach($listCateTake as $cate)
         <div class="col-sm-4 col-xs-12">
             <div class="cat-image">
-                <a href="{{route('client.category.tour',['id'=>$listCate[$i]])}}">
-                    <img src="{{config('global.APP_URL').$listCate[$i]->image}}" alt="{{$listCate[$i]->name}}" class="img-responsive" />
+                <a href="{{route('client.category.tour',['id'=>$cate->id])}}">
+                    <img src="{{config('global.APP_URL').$cate->image}}" alt="{{$cate->name}}" class="img-responsive" />
                 </a>
             </div>
-            <div class="cat-name"> 
-                <a href="{{route('client.category.tour',['id'=>$listCate[$i]])}}">{{$listCate[$i]->name}}</a> 
+            <div class="cat-name">
+                <a href="{{route('client.category.tour',['id'=>$cate])}}">{{$cate->name}}</a>
             </div>
         </div>
-        @endfor
+        @endforeach
         @else
         <p>Hiện tại chưa có danh mục nào</p>
         @endif
@@ -41,151 +41,38 @@
 </div>
 <div class="tour-home product_module product_mostviewed" id="product_mostviewed-0" style="background-image: url('client/image/catalog/banner/home-customer-bg.jpg')">
     <div class="container">
-        <h3 class="text-center heading-title">Tour du lịch Châu Âu khuyến mãi - hot</h3>
+        <h3 class="text-center heading-title">Tour du lịch hấp dẫn - hot</h3>
         <div class="container">
             <div class="owl-carousel owl-theme new_by_catnew0">
+                @forelse($listTourTake as $tour)
                 <div class="item" style="padding: 20px;">
                     <div class="tour-border">
-                        <div class="tour-image"> <a href="tour-thai-lan-bangkok-pattaya-trong-5-ngay-4-dem.html" title="Tour Thái Lan - Bangkok - Pattaya Trong 5 Ngày 4 Đêm"> <img src="client/image/cache/catalog/news/1d_1514539618-500x400.jpg" class="img-responsive" alt="Tour Thái Lan - Bangkok - Pattaya Trong 5 Ngày 4 Đêm" /> </a>
-                            <div class="cover"> <a href="tour-thai-lan-bangkok-pattaya-trong-5-ngay-4-dem.html">Xem</a> </div>
-                        </div>
-                        <div class="tour-info">
-                            <div class="tour-name"> <a href="tour-thai-lan-bangkok-pattaya-trong-5-ngay-4-dem.html" title="Tour Thái Lan - Bangkok - Pattaya Trong 5 Ngày 4 Đêm"> <span>Tour Thái
-                                        Lan - Bangkok - Pattaya Trong 5 Ngày 4 Đêm</span> </a> </div>
-                            <div class="tour-description"> Lịch trình tours Ngày 1: HA NOI – BANGKOK (Ăn
-                                tối)             Xe ô tô đón Quý khách tại điểm hẹn Nhà&#8230;</div>
-                            <div class="tour-price"> <span class="price product-price">6,900,000đ</span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item" style="padding: 20px;">
-                    <div class="tour-border">
-                        <div class="tour-image"> <a href="tour-scotland-anh-quoc.html" title="Tour Scotland - Anh Quốc"> <img src="client/image/cache/catalog/news/bruges-500x400.png" class="img-responsive" alt="Tour Scotland - Anh Quốc" /> </a>
-                            <div class="cover"> <a href="tour-scotland-anh-quoc.html">Xem</a> </div>
-                        </div>
-                        <div class="tour-info">
-                            <div class="tour-name"> <a href="tour-scotland-anh-quoc.html" title="Tour Scotland - Anh Quốc"> <span>Tour Scotland - Anh Quốc</span> </a>
-                            </div>
-                            <div class="tour-description"> Ngày 1: Việt Nam – London. Tối: Xe đưa đón đoàn tại trung
-                                tâm thành phố và đưa ra sân bay quốc tế làm&#8230;</div>
-                            <div class="tour-price"> <span class="price product-price">75,900,000đ</span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item" style="padding: 20px;">
-                    <div class="tour-border">
-                        <div class="tour-image"> <a href="tour-du-lich-singapore-4-ngay-3-dem-khoi-hanh-tu-ha-noi.html" title="Tour Du Lịch Singapore 4 Ngày 3 Đêm - Khởi Hành Từ Hà Nội"> <img src="client/image/cache/catalog/news/thanhhuong-182623042608-binh-minh-Angkor-Wat-500x400.jpg" class="img-responsive" alt="Tour Du Lịch Singapore 4 Ngày 3 Đêm - Khởi Hành Từ Hà Nội" /> </a>
-                            <div class="cover"> <a href="tour-du-lich-singapore-4-ngay-3-dem-khoi-hanh-tu-ha-noi.html">Xem</a>
+                        <div class="tour-image">
+                            <a href="{{route('client.tour',['tour'=>$tour->id])}}"> 
+                                <img src="{{config('global.APP_URL').$tour->image}}" class="img-responsive" alt="{{$tour->name}}" />
+                            </a>
+                            <div class="cover">
+                                <a href="{{route('client.tour',['tour'=>$tour->id])}}">Xem</a>
                             </div>
                         </div>
                         <div class="tour-info">
-                            <div class="tour-name"> <a href="tour-du-lich-singapore-4-ngay-3-dem-khoi-hanh-tu-ha-noi.html" title="Tour Du Lịch Singapore 4 Ngày 3 Đêm - Khởi Hành Từ Hà Nội"> <span>Tour Du
-                                        Lịch Singapore 4 Ngày 3 Đêm - Khởi Hành Từ Hà Nội</span> </a> </div>
-                            <div class="tour-description"> Lịch trình tour Ngày 1: SINGAPORE (Ăn trưa MB, ăn tối) Xe
-                                đón Quý khách tại cổng nhà hát lớn số 1 Lê&#8230;</div>
-                            <div class="tour-price"> <span class="price product-price">9,780,000đ</span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item" style="padding: 20px;">
-                    <div class="tour-border">
-                        <div class="tour-image"> <a href="tour-du-lich-hy-lap-kham-pha-athens-santorini-2019.html" title="Tour du lịch Hy Lạp khám phá Athens - Santorini 2019"> <img src="client/image/cache/catalog/news/co-nen-di-tour-hy-lap-500x400.jpg" class="img-responsive" alt="Tour du lịch Hy Lạp khám phá Athens - Santorini 2019" /> </a>
-                            <div class="cover"> <a href="tour-du-lich-hy-lap-kham-pha-athens-santorini-2019.html">Xem</a> </div>
-                        </div>
-                        <div class="tour-info">
-                            <div class="tour-name"> <a href="tour-du-lich-hy-lap-kham-pha-athens-santorini-2019.html" title="Tour du lịch Hy Lạp khám phá Athens - Santorini 2019"> <span>Tour du lịch
-                                        Hy Lạp khám phá Athens - Santorini 2019</span> </a> </div>
-                            <div class="tour-description"> Ngày 01: Việt Nam - Athens Xe của Tour đón quý khách tại
-                                điểm đón tại và đưa ra sân bay đón chuyến bay&#8230;</div>
-                            <div class="tour-price"> <span class="price product-price">64,990,000đ</span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item" style="padding: 20px;">
-                    <div class="tour-border">
-                        <div class="tour-image"> <a href="tour-du-lich-bo-tay-nuoc-my-8-ngay-tu-ha-noi-2019.html" title="Tour du lịch bờ Tây nước Mỹ 8 ngày từ Hà Nội 2019"> <img src="client/image/cache/catalog/news/tour-usa-gia-re-500x400.jpg" class="img-responsive" alt="Tour du lịch bờ Tây nước Mỹ 8 ngày từ Hà Nội 2019" /> </a>
-                            <div class="cover"> <a href="tour-du-lich-bo-tay-nuoc-my-8-ngay-tu-ha-noi-2019.html">Xem</a> </div>
-                        </div>
-                        <div class="tour-info">
-                            <div class="tour-name"> <a href="tour-du-lich-bo-tay-nuoc-my-8-ngay-tu-ha-noi-2019.html" title="Tour du lịch bờ Tây nước Mỹ 8 ngày từ Hà Nội 2019"> <span>Tour du lịch bờ
-                                        Tây nước Mỹ 8 ngày từ Hà Nội 2019</span> </a> </div>
-                            <div class="tour-description"> Ngày 01: Hà Nội - San Francisco (Ăn Trưa MB, Tối)
-                                09h30: Toàn đoàn tập kết tại sân bay Nội Bài và làm&#8230;</div>
-                            <div class="tour-price"> <span class="price product-price">39,900,000đ</span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item" style="padding: 20px;">
-                    <div class="tour-border">
-                        <div class="tour-image"> <a href="tour-bac-au-dan-mach-na-uy-thuy-dien-phan-lan-2019.html" title="Tour Bắc Âu: Đan Mạch - Na Uy - Thụy Điển - Phần Lan 2019"> <img src="client/image/cache/catalog/news/duc2-500x400.jpg" class="img-responsive" alt="Tour Bắc Âu: Đan Mạch - Na Uy - Thụy Điển - Phần Lan 2019" /> </a>
-                            <div class="cover"> <a href="tour-bac-au-dan-mach-na-uy-thuy-dien-phan-lan-2019.html">Xem</a> </div>
-                        </div>
-                        <div class="tour-info">
-                            <div class="tour-name"> <a href="tour-bac-au-dan-mach-na-uy-thuy-dien-phan-lan-2019.html" title="Tour Bắc Âu: Đan Mạch - Na Uy - Thụy Điển - Phần Lan 2019"> <span>Tour
-                                        Bắc Âu: Đan Mạch - Na Uy - Thụy Điển - Phần Lan 2019</span> </a> </div>
-                            <div class="tour-description"> Ngày 01: Hà Nội - Copenhagen (Ăn Nghỉ MB) 18h30: Xe và
-                                Hướng dẫn viên đón Quý khách tại điểm hẹn, khởi&#8230;</div>
-                            <div class="tour-price"> <span class="price product-price">79,900,000đ</span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item" style="padding: 20px;">
-                    <div class="tour-border">
-                        <div class="tour-image"> <a href="lac-loi-o-dai-bac-trong-3-ngay-2-dem-ban-muon-thu-khong.html" title="Lạc Lối Ở Đài Bắc Trong 3 Ngày 2 Đêm - Bạn Muốn Thử Không?"> <img src="client/image/cache/catalog/news/kaohug3-500x400.jpg" class="img-responsive" alt="Lạc Lối Ở Đài Bắc Trong 3 Ngày 2 Đêm - Bạn Muốn Thử Không?" /> </a>
-                            <div class="cover"> <a href="lac-loi-o-dai-bac-trong-3-ngay-2-dem-ban-muon-thu-khong.html">Xem</a>
+                            <div class="tour-name">
+                                <a href="{{route('client.tour',['tour'=>$tour->id])}}"> 
+                                    <span>{{$tour->name}}</span> 
+                                </a>
+                            </div>
+                            <div class="tour-description"> 
+                                {!! $tour->description !!},&#8230;
+                            </div>
+                            <div class="tour-price">
+                                <span class="price product-price">{{$tour->price}}</span>
                             </div>
                         </div>
-                        <div class="tour-info">
-                            <div class="tour-name"> <a href="lac-loi-o-dai-bac-trong-3-ngay-2-dem-ban-muon-thu-khong.html" title="Lạc Lối Ở Đài Bắc Trong 3 Ngày 2 Đêm - Bạn Muốn Thử Không?"> <span>Lạc
-                                        Lối Ở Đài Bắc Trong 3 Ngày 2 Đêm - Bạn Muốn Thử Không?</span> </a> </div>
-                            <div class="tour-description"> Đài Loan là địa điểm du lịch lý tưởng để bạn vừa có thể
-                                cảm nhận nhịp sống thành phố năng động, hiện&#8230;</div>
-                            <div class="tour-price"> <span class="price product-price">5,600,000đ</span> </div>
-                        </div>
                     </div>
                 </div>
-                <div class="item" style="padding: 20px;">
-                    <div class="tour-border">
-                        <div class="tour-image"> <a href="kham-pha-dat-nuoc-cuba-co-kinh.html" title="Khám phá đất nước Cuba cổ kính"> <img src="client/image/cache/catalog/news/du-lich-lien-tuyen-chau-my-kham-pha-dat-nuoc-cuba-co-kinh-220201740203PM-500x400.jpg" class="img-responsive" alt="Khám phá đất nước Cuba cổ kính" /> </a>
-                            <div class="cover"> <a href="kham-pha-dat-nuoc-cuba-co-kinh.html">Xem</a> </div>
-                        </div>
-                        <div class="tour-info">
-                            <div class="tour-name"> <a href="kham-pha-dat-nuoc-cuba-co-kinh.html" title="Khám phá đất nước Cuba cổ kính"> <span>Khám phá đất nước Cuba cổ
-                                        kính</span> </a> </div>
-                            <div class="tour-description"> Ngày 1: Hà Nội – New York. Sáng: Xe và HDV đón quý khách
-                                tại địa điểm đã hẹn trước ra sân bay làm một&#8230;</div>
-                            <div class="tour-price"> <span class="price product-price">93,900,000đ</span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item" style="padding: 20px;">
-                    <div class="tour-border">
-                        <div class="tour-image"> <a href="du-lich-dong-tay-canada-10-ngay-tu-ha-noi-nam-2019.html" title="Du lịch Đông Tây Canada 10 ngày từ Hà Nội năm 2019"> <img src="client/image/cache/catalog/news/ottawai-photo-500x400.jpg" class="img-responsive" alt="Du lịch Đông Tây Canada 10 ngày từ Hà Nội năm 2019" /> </a>
-                            <div class="cover"> <a href="du-lich-dong-tay-canada-10-ngay-tu-ha-noi-nam-2019.html">Xem</a> </div>
-                        </div>
-                        <div class="tour-info">
-                            <div class="tour-name"> <a href="du-lich-dong-tay-canada-10-ngay-tu-ha-noi-nam-2019.html" title="Du lịch Đông Tây Canada 10 ngày từ Hà Nội năm 2019"> <span>Du lịch Đông
-                                        Tây Canada 10 ngày từ Hà Nội năm 2019</span> </a> </div>
-                            <div class="tour-description"> Ngày 01: Hà Nội - Toronto (Ăn trên MB) 08h30: Tập trung
-                                tại điểm hẹn trong thành phố Hà Nội để xe đón&#8230;</div>
-                            <div class="tour-price"> <span class="price product-price">83,900,000đ</span> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item" style="padding: 20px;">
-                    <div class="tour-border">
-                        <div class="tour-image"> <a href="du-lich-chau-au-y-thuy-si-phap.html" title="Du lịch Châu Âu (Ý - Thụy Sĩ - Pháp)"> <img src="client/image/cache/catalog/news/du-lich-phap-y-thuy-si-500x400.jpg" class="img-responsive" alt="Du lịch Châu Âu (Ý - Thụy Sĩ - Pháp)" /> </a>
-                            <div class="cover"> <a href="du-lich-chau-au-y-thuy-si-phap.html">Xem</a> </div>
-                        </div>
-                        <div class="tour-info">
-                            <div class="tour-name"> <a href="du-lich-chau-au-y-thuy-si-phap.html" title="Du lịch Châu Âu (Ý - Thụy Sĩ - Pháp)"> <span>Du lịch Châu Âu (Ý - Thụy Sĩ
-                                        - Pháp)</span> </a> </div>
-                            <div class="tour-description"> NGÀY 1: TP.HCM - DOHA (QATAR)Quý khách tự túc tập trung
-                                tại lầu 2 - Ga đi quốc tế sân bay Tân Sơn Nhất,&#8230;</div>
-                            <div class="tour-price"> <span class="price product-price">90,990,000đ</span> </div>
-                        </div>
-                    </div>
-                </div>
+                @empty
+                <p>Hiện chưa có tour nào!</p>
+                @endforelse
             </div>
         </div>
         <script type="text/javascript">

@@ -10,7 +10,7 @@ use App\Models\OrderDetail;
 use App\Models\Tour;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-
+use App\Http\Requests\Client\Cart\InfoPayStore;
 class CartController extends Controller
 {
     // public function __construct()
@@ -47,25 +47,25 @@ class CartController extends Controller
                 }
             }
             session()->put('cart', $listCart);
-        }
-        else{
-            dd("Không có tour nào, check lại cái này");
-        }
-        $listCate = Category::all();
-        $listCart = Session::get('cart');
-        $arr_id = array();
-        foreach ($listCart as $cart) {
-            array_push($arr_id, $cart['tour_id']);
-        }
-        $listTour = Tour::whereIn('id', $arr_id)->get();
-        // lấy ảnh đầu tiên trong gallery
-        $listTour->load(['galleries']);
-        foreach ($listTour as $tour) {
-            foreach ($tour->galleries as $gall) {
-                $tour->img = $gall['link_image'];
-                break;
+            $listCart = Session::get('cart');
+            $arr_id = array();
+            foreach ($listCart as $cart) {
+                array_push($arr_id, $cart['tour_id']);
+            }
+            $listTour = Tour::whereIn('id', $arr_id)->get();
+            // lấy ảnh đầu tiên trong gallery
+            $listTour->load(['galleries']);
+            foreach ($listTour as $tour) {
+                foreach ($tour->galleries as $gall) {
+                    $tour->img = $gall['link_image'];
+                    break;
+                }
             }
         }
+        else{
+            $listTour=null;
+        }
+        $listCate = Category::all();
         //
         return view('client/cart', ['listCate' => $listCate, 'listTour' => $listTour]);
     }
@@ -80,6 +80,9 @@ class CartController extends Controller
             array_push($listNewCart, $cart);
         }
         session()->put('cart', $listNewCart);
+        if(empty($listNewCart)){
+            session()->forget('cart');
+        }
         return redirect()->route('client.cart.show');
     }
     public function saveChange()
@@ -121,11 +124,11 @@ class CartController extends Controller
             'amount_child2' => $tourSelected['amount_child2']
         ]);
     }
-    public function store()
+    public function store(InfoPayStore $request)
     {
-        $orderer = request()->only(['orderer'])['orderer'];
-        $order = request()->only(['order'])['order'];
-        $info_person = request()->except('_token', 'orderer', 'order');
+        $orderer = $request->only(['orderer'])['orderer'];
+        $order = $request->only(['order'])['order'];
+        $info_person = $request->except('_token', 'orderer', 'order');
         $id_orderer = InfoOrderer::create($orderer)->id;
         $order['info_orderer_id'] = $id_orderer;
         $id_order = Order::create($order)->id;

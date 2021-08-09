@@ -64,11 +64,15 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Mật khẩu</label>
-                    <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Mật khẩu">
+                    <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Mật khẩu" />
+                    @error('password')
+                        <span id="check-name" class="validate-warning">{{$message}}</span>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label for="exampleInputConfirmPassword1">Xác thực mật khẩu</label>
-                    <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Xác thực">
+                    <input type="password" name="password_confirmation" 
+                            class="form-control" id="exampleInputConfirmPassword1" placeholder="Xác thực">
                 </div>
                 <button type="submit" class="btn btn-primary mr-2">Thay đổi</button>
                 <button type="reset" class="btn btn-light">Đặt lại</button>

@@ -75,10 +75,16 @@
                     <div class="form-group">
                         <label for="inpDes"><b>Miêu tả ngắn</b></label>
                         <textarea class="form-control" id="inpDes" name="description" rows="4">{{old('description')}}</textarea>
+                        @error('description')
+                            <span id="check-name" class="validate-warning">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="inpSche"><b>Lịch trình</b></label>
                         <textarea class="form-control" id="inpSche" name="schedule" rows="4">{{old('schedule')}}</textarea>
+                        @error('schedule')
+                            <span id="check-name" class="validate-warning">{{$message}}</span>
+                        @enderror
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Tạo</button>
                     <button class="btn btn-light" type="reset">Đặt lại</button>

@@ -32,7 +32,12 @@ class StoreRequest extends FormRequest
             'price'=>'required|numeric|between:1,500000000',
             'travel_day'=>'required|numeric|between:1,400',
             'departure_place'=>'required|min:1|max:500',
-            'image'=>new checkImageOnTours()
+            'description'=>'required',
+            'schedule'=>'required',
+            'image'=>[
+                new checkImageOnTours(),
+                'required'
+            ]
         ];
     }
     public function messages()
@@ -46,7 +51,7 @@ class StoreRequest extends FormRequest
             'travel_day.between'=>'Thời gian không hợp lệ',
             'departure_place.max'=>'Số ký tự nhập không hợp lệ',
             'departure_place.min'=>'Số ký tự nhập không hợp lệ',
-            // 'image.image'=>'File tải lên không phải định dạng ảnh'
+            'image.image'=>'File tải lên không phải định dạng ảnh'
         ];
     }
     public function attributes()
@@ -56,7 +61,9 @@ class StoreRequest extends FormRequest
             'price'=>'Giá',
             'travel_day'=>'Thời gian đi',
             'departure_place'=>'Nơi khởi hành',
-            'image'=>"Ảnh"
+            'image'=>"Ảnh",
+            'description'=>'Miêu tả',
+            'schedule'=>'Lịch trình',
         ];
     }
 }

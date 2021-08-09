@@ -11,7 +11,7 @@
                     <div class="form-group">
                         <label for="exampleInputName1">Tên danh mục</label>
                         <input type="text" name="name" class="form-control" 
-                               value="@if(!empty(old('name'))){{old('name')}}@else{{$data->name}}@endif" 
+                               value="@if(old('name')){{old('name')}}@elseif(old('name',1)==""){{""}}@else{{$data->name}}@endif" 
                                id="exampleInputName1" placeholder="Tên danh mục">
                         @error('name')
                         <span id="check-name" class="validate-warning">{{$message}}</span>

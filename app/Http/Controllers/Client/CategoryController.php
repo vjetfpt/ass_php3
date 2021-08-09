@@ -16,7 +16,7 @@ class CategoryController extends Controller
             echo "Danh mục không tồn tại" ;
             die();
         }
-        $listTour = Tour::where('category_id',$id)->get();
+        $listTour = Tour::where('category_id',$id)->paginate(3);
         $listTour->load(['galleries']);
         foreach($listTour as $tour){
             foreach($tour->galleries as $gall){

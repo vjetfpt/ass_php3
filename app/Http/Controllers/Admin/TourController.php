@@ -7,12 +7,12 @@ use App\Models\Tour;
 use App\Models\Category;
 use App\Models\Gallery;
 use App\Http\Requests\Admin\Tour\StoreRequest;
-
+use App\Http\Requests\Admin\Tour\StoreEditRequest;
 class TourController extends Controller
 {
     public function index()
     {
-        $listTours = Tour::all();
+        $listTours = Tour::paginate(4);
         $listPictures = Gallery::all();
         foreach ($listTours as $tour) {
             foreach ($listPictures as $pic) {
@@ -38,6 +38,7 @@ class TourController extends Controller
     public function store(StoreRequest $request)
     {
         $tour = $request->except('_token', 'image');
+        // dd($tour);
         $idTour = Tour::create($tour)->id;
         $images = $_FILES['image'];
         for ($i = 0; $i < count($images['name']); $i++) {
@@ -61,7 +62,7 @@ class TourController extends Controller
         return view('admin/tour/edit', ['data' => $data, 'dataImage' => $listImages, 'list_cate' => $listCate]);
     }
 
-    public function update(StoreRequest $request, $id)
+    public function update(StoreEditRequest $request, $id)
     {
         $data = $request->except('_token', 'img_delete', 'image');
         $listDeleteImage = $request->input('img_delete');

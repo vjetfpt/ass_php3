@@ -23,6 +23,9 @@ Route::group([
     Route::get('tour/{tour}','TourController@show')->name('tour');
     Route::get('login','LoginController@index')->name('login');
     Route::post('login','LoginController@store')->name('store');
+    Route::get('logout','LoginController@logout')->name('logout');
+    Route::get('register','RegisterController@index')->name('register.index');
+    Route::post('register','RegisterController@store')->name('register.store');
     Route::group([
         'prefix'=>'cart',
         'as'=>'cart.'
@@ -38,17 +41,17 @@ Route::group([
     });
 });
 //Admin
-Route::get('/admin/home', function () {
-    return view('/admin/home/index');
-})->name('admin.home');
-
 Route::group(
     [
         'prefix' => 'admin',
         'as' => 'admin.',
-        'namespace' => 'Admin'
+        'namespace' => 'Admin',
+        // 'middleware'=> ['check_login_admin']
     ],
     function () {
+        Route::get('home', function () {
+            return view('/admin/home/index');
+        })->name('home');
         Route::group([
             'prefix' => 'category',
             'as' => 'category.',
@@ -59,6 +62,7 @@ Route::group(
             Route::get('edit/{id}', 'CategoryController@edit')->name('edit');
             Route::post('edit/{id}', 'CategoryController@update')->name('update');
             Route::get('delete/{id}', 'CategoryController@delete')->name('delete');
+            // ->middleware('check_author_admin');
         });
         Route::group([
             'prefix' => 'tour',
@@ -89,12 +93,14 @@ Route::group(
             Route::get('/','OrderController@index')->name('index');
             Route::get('create','OrderController@create')->name('create');
             Route::post('store','OrderController@store')->name('store');
-            Route::get('edit/{user}','OrderController@edit')->name('edit');
-            Route::post('edit/{user}','OrderController@update')->name('update');
-            Route::post('delete/{user}','OrderController@delete')->name('delete');
+            Route::get('edit/{order}','OrderController@edit')->name('edit');
+            Route::post('edit/{order}','OrderController@update')->name('update');
+            Route::get('delete/{order}','OrderController@delete')->name('delete');
         });
     }
 );
-
+Route::get('/tours/all','Client\TourController@index')->name('client.tour.all');
+Route::get('admin/login','Admin\LoginController@index')->name('admin.login.index');
+Route::post('admin/login','Admin\LoginController@store')->name('admin.login.store');
 Route::get('/test',"testController@test");
 

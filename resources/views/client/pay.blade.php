@@ -64,6 +64,9 @@
                                                 </div>
                                             </div>
                                             <hr />
+                                            @error('orderer')
+                                                <p style="color:red;">{{$message}}</p>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -181,7 +184,7 @@
                                     <div class="form-group">
                                         <p> Độ tuổi</p>
                                         <input type="text" name="" id="" value="Trẻ em" disabled class="form-control" />
-                                        <input type="hidden" name="child1_info{{$i}}[age]" value="{{config(common.about_age.child1)}}" />
+                                        <input type="hidden" name="child1_info{{$i}}[age]" value="{{config('common.about_age.child1')}}" />
                                     </div>
                                 </div>
                                 <input type="hidden" name="child1_info{{$i}}[fare]" value="{{config('common.tourPrice.child1')*$tour->price}}"/>
@@ -214,7 +217,7 @@
                                 <div class="form-group">
                                     <p> Độ tuổi</p>
                                     <input type="text" name="" id="" value="Trẻ nhỏ" disabled class="form-control" />
-                                    <input type="hidden" name="child2_info{{$i}}[age]" value="{{config(common.about_age.child2)}}"/>
+                                    <input type="hidden" name="child2_info{{$i}}[age]" value="{{config('common.about_age.child2')}}"/>
                                 </div>
                             </div>
                             <input type="hidden" name="child2_info{{$i}}[fare]" value="{{config('common.tourPrice.child2')*$tour->price}}"/>
@@ -253,7 +256,7 @@
                             <div class="group">
                                 <div class="adr-oms radio select-method">
                                     <input type="radio" id="payment-method-cod" name="order[payment_method]" 
-                                            value="{{config('common.payment_method.money')}}" />
+                                            value="{{config('common.payment_method.money')}}" checked/>
                                     <label for="payment-method-cod">
                                         <div class="adr-oms payment-method">
                                             <div class="thumbnail"> 

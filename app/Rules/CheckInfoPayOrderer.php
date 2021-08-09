@@ -2,10 +2,9 @@
 
 namespace App\Rules;
 
-use App\Models\User;
 use Illuminate\Contracts\Validation\Rule;
 
-class checkUniqueEmailOnUsers implements Rule
+class CheckInfoPayOrderer implements Rule
 {
     /**
      * Create a new rule instance.
@@ -24,13 +23,14 @@ class checkUniqueEmailOnUsers implements Rule
      * @param  mixed  $value
      * @return bool
      */
-    public function passes($attribute, $newEmail)
+    public function passes($attribute, $value)
     {
-        $oldEmail = request()->user->email;
-        if($oldEmail === $newEmail){
-            return true;
+        $check = 0;
+        foreach($value as $va){
+            if(empty($va)){
+                $check = 1;
+            }
         }
-        $check = User::where('email',$newEmail)->count();
         if($check>0){
             return false;
         }
@@ -44,6 +44,6 @@ class checkUniqueEmailOnUsers implements Rule
      */
     public function message()
     {
-        return 'Email đã tồn tại';
+        return 'Bạn cần nhập đủ thông tin người đặt tour.';
     }
 }

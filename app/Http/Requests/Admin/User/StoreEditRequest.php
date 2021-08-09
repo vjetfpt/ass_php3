@@ -33,6 +33,7 @@ class StoreEditRequest extends FormRequest
             'phone' => 'required',
             'address' => 'required',
             'role' => 'required',
+            'password'=>'same:password_confirmation'
         ];
     }
     public function messages()
@@ -42,6 +43,7 @@ class StoreEditRequest extends FormRequest
             'name.max' => 'Nhập quá ký tự cho phép',
             'email.email' => 'Nhập không đúng định dạng email',
             'email.unique' => 'Email đã tồn tại',
+            'password.same'=>'Mật khẩu và xác thực không khớp'
         ];
     }
     public function attributes()

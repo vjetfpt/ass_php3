@@ -26,11 +26,11 @@ class StoreRequest extends FormRequest
         return [
             'name'=>'required|max:200',
             'email'=>'required|email|unique:users,email',
-            'password'=>'required',
+            'password'=>'required|min:3|same:password_confirmation',
             'phone'=>'required',
             'address'=>'required',
             'role'=>'required',
-            'password_confirmation'=>'confirmed'
+            // 'password_confirmation'=>'confirmed'
         ];
     }
     public function messages()
@@ -38,8 +38,10 @@ class StoreRequest extends FormRequest
         return [
             'required'=>':attribute không được để trống',
             'name.max'=>'Nhập quá ký tự cho phép',
+            'password.min'=>'Mật khẩu nhập nhỏ hơn 3 ký tự',
             'email.email'=>'Nhập không đúng định dạng email',
             'email.unique'=>'Email đã tồn tại',
+            'password.same'=>'Mật khẩu và xác thực không khớp'
         ];
     }
     public function attributes()

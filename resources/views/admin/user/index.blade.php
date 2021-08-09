@@ -61,6 +61,9 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="mt-3">
+                    {{$listUser->links('vendor.pagination.custome')}}
+                </div>
             </div>
         </div>
     </div>

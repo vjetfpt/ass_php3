@@ -2,11 +2,12 @@
 @section('content')
 <div class="container">
     <div class="row">
+        @if($listTour!==null||!empty($listTour))
         <div class="container why-us">
             <h3 class="heading-title">Giỏ hàng</h3>
             <div class="row">
                 <div class="col-sm-12">
-                    <form action="{{route('client.cart.saveChange')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('client.cart.saveChange')}}" method="post">
                         @csrf
                         <div class="table-responsive table-cart-content">
                             <table class="table table-bordered">
@@ -108,6 +109,9 @@
                 </form>
             </div>
         </div>
+        @else
+        <h3 style="margin-bottom:208px;">Giỏ hàng đang trống</h3>
+        @endif
     </div>
 </div>
 @endsection

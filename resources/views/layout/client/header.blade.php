@@ -13,7 +13,6 @@
                         <div class="col-sm-12 col-xs-12">
                             <ul class="sf-menu" id="example">
                                 <li> <a href="{{config('global.APP_URL')}}">Trang chủ</a> </li>
-                                <li> <a href="gioi-thieu.html">Về ETravel Tours</a> </li>
                                 <li>
                                     <a href="">Danh mục</a>
                                     <ul class="menu-multi-level">
@@ -26,6 +25,7 @@
                                         @endforeach
                                     </ul>
                                 </li>
+                                <li> <a href="{{route('client.tour.all')}}">Tour hiện có</a> </li>
                                 <li> <a href="cam-nang-du-lich.html">Cẩm nang du lịch</a> </li>
                             </ul>
                         </div>
@@ -37,7 +37,7 @@
                     @guest
                     <div class="col-sm-6">
                         <i class="fas fa-key"></i>
-                        <a href="#">Đăng kí</a>
+                        <a href="{{route('client.register.index')}}">Đăng kí</a>
                     </div>
                     <div class="col-sm-6">
                         <i class="fas fa-sign-in-alt"></i>
@@ -45,18 +45,14 @@
                     </div>
                     @endguest
                     @auth
-                    <p>Hello
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown button
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                        <button class="dropbtn">{{auth()->user()->name}}|{{auth()->user()->email}}</button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="{{route('client.logout')}}">Đăng xuất</a>
                         </div>
                     </div>
-                    </p>
                     @endauth
                 </div>
             </div>
