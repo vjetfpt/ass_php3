@@ -1,21 +1,130 @@
-.header-func{
+.header-func {
     padding-top: 24px;
     padding-right: 0;
 }
-.header-func span{
+
+.header-func span {
     color: red;
     font-weight: bolder;
     opacity: 0.8;
 }
-.header-func .row{
+
+.header-func .row {
     text-align: center;
 }
-.table-choise-person{
+
+.table-choise-person {
     text-align: center;
 }
-.table-choise-person tbody tr td{
+
+.table-choise-person tbody tr td {
     padding: 8px 8px;
 }
-.label-passeger{
+
+.label-passeger {
     margin-left: 12px;
 }
+
+/* .area-order {
+} */
+
+.show_info_tour {
+    font-size: 20px;
+    font-weight: 150;
+    line-height: 1.5;
+}
+
+.order-image {
+    text-align: center;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+form.search-box{
+    margin: 30px 0px;
+    position: relative;
+    padding-left: 12px;
+}
+form.search-box input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 90%;
+    background: #f1f1f1;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+  
+  /* Style the submit button */
+  form.search-box button {
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    border-radius: 20px;
+    position: absolute;
+    right: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  form.search-box button:hover {
+    background: #0b7dda;
+  }
+  
+  /* Clear floats */
+  form.search-box::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/* body{
+    background-color: #F9F9F9;
+} */

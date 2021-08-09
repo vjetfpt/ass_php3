@@ -13,4 +13,7 @@ class Gallery extends Model
         'link_image',
         'tour_id'
     ];
+    public function tour(){
+        return $this->belongsTo(Tour::class,'tour_id','id');
+    }
 }

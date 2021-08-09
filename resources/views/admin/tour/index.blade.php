@@ -29,7 +29,7 @@
                                     <img src="{{config('global.APP_URL').$item->image}}" alt="Không hiển thị được ảnh">
                                 </td>
                                 <td style="width:200px;">{{$item->departure_place}}</td>
-                                <td style="width:100px;">{{$item->travel_day}} ngày</td>
+                                <td style="width:50px;">{{$item->travel_day}} ngày</td>
                                 <td>{{$item->price}}</td>
                                 <td class="text-center" style="width: 200px;">
                                     <a class="text-decoration-none" href="{{route('admin.tour.edit',['id'=>$item->id])}}">
@@ -44,6 +44,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                </div>
+                <div>
+                    {{$data->links('vendor.pagination.custome')}}
                 </div>
             </div>
         </div>

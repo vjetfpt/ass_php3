@@ -12,4 +12,7 @@ class Category extends Model
         'name',
         'image'
     ];
+    public function tours(){
+        return $this->hasMany(Tour::class,'category_id','id');
+    }
 }

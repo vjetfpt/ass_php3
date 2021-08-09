@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/admin/vendors/base/vendor.bundle.base.css">
     <link rel="stylesheet" href="/admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
     <link rel="stylesheet" href="/admin/css/style.css">
-    <link rel="stylesheet" href="/admin/css/main.css"/>
+    <link rel="stylesheet" href="/admin/css/main.css" />
     <link rel="shortcut icon" href="/admin/images/favicon.png" />
 </head>
 
@@ -36,6 +36,7 @@
         let item = document.getElementById(nameId);
         item.classList.add("active");
     </script>
+    <script src="/admin/js/bootstrap.min.js"></script>
     @yield('script')
 </body>
 

@@ -7,27 +7,27 @@
             </a>
         </li>
         <li class="nav-item side-item" id="category">
-            <a class="nav-link" href="{{route('admin.category.show')}}">
+            <a class="nav-link" href="{{route('admin.category.index')}}">
                 <i class="mdi mdi-view-headline menu-icon"></i>
                 <span class="menu-title">Danh mục</span>
             </a>
         </li>
         <li class="nav-item side-item" id="tour">
-            <a class="nav-link" href="{{route('admin.tour.show')}}">
+            <a class="nav-link" href="{{route('admin.tour.index')}}">
                 <i class="mdi mdi-subway menu-icon"></i>
                 <span class="menu-title">Tours</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="backend/pages/tables/basic-table.html">
-                <i class="mdi mdi-grid-large menu-icon"></i>
-                <span class="menu-title">Tables</span>
+        <li class="nav-item" id="user">
+            <a class="nav-link" href="{{route('admin.user.index')}}">
+                <i class="mdi mdi-account-circle menu-icon"></i>
+                <span class="menu-title">Tài khoản</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="backend/pages/icons/mdi.html">
-                <i class="mdi mdi-emoticon menu-icon"></i>
-                <span class="menu-title">Icons</span>
+        <li class="nav-item" id="order">
+            <a class="nav-link" href="{{route('admin.order.index')}}">
+                <i class="mdi mdi-dropbox menu-icon"></i>
+                <span class="menu-title">Đơn hàng</span>
             </a>
         </li>
         <li class="nav-item">

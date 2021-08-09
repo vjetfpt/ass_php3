@@ -19,4 +19,13 @@ class Tour extends Model
         'departure_place',
         'category_id'
     ];
+    public function category(){
+        return $this->belongsTo(Category::class,'category_id','id');
+    }
+    public function galleries(){
+        return $this->hasMany(Gallery::class,'tour_id','id');
+    }
+    public function orders(){
+        return $this->hasMany(Order::class,'tour_id','id');
+    }
 }

@@ -10,8 +10,10 @@
                     @csrf
                     <div class="form-group">
                         <label for="inpName">Tên danh mục</label>
-                        <input type="text" name="name" class="form-control" id="inpName" placeholder="Tên danh mục">
-                        <span id="check-name" class="validate-warning" style="display:none;">Danh mục không được để trống</span>
+                        <input type="text" name="name" class="form-control" id="inpName" placeholder="Tên danh mục" value="{{old('name')}}">
+                        @error('name')
+                        <span id="check-name" class="validate-warning">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Ảnh đại diện</label>
@@ -22,7 +24,9 @@
                             </span>
                             <input type="text" class="form-control file-upload-info" disabled placeholder="Ảnh đại diện danh mục">
                         </div>
-                        <span id="check-img" class="validate-warning" style="display:none;"></span>
+                        @error('image')
+                        <span id="check-name" class="validate-warning">{{$message}}</span>
+                        @enderror
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Thêm mới</button>
                     <button type="reset" class="btn btn-light">Đặt lại</button>
@@ -34,31 +38,31 @@
 @endsection
 @section('script')
 <script>
-    const form = document.getElementsByTagName('form')[0];
-    const inpName = document.querySelector('#inpName');
-    const checkName = document.querySelector('#check-name');
-    const inpImg = document.querySelector('#inpImg');
-    const checkImg = document.querySelector('#check-img');
-    const arr_alow_type = ["image/png", "image/jpeg"]
-    form.addEventListener('submit', function(e) {
-        if (inpName.value == "") {
-            checkName.style.display = "block";
-            e.preventDefault();
-        }
-        if (inpImg.files.length) {
-            let validate_img = "";
-            if (!arr_alow_type.includes(inpImg.files[0].type)) {
-                validate_img = "File gửi lên sai định dạng  ";
-            }
-            if (inpImg.files[0] > 1024000) {
-                validate_img += "File ảnh vượt quá 10mb";
-            }
-            if (validate_img != "") {
-                checkImg.textContent = validate_img;
-                checkImg.style.display = "block";
-                e.preventDefault();
-            }
-        }
-    })
+    // const form = document.getElementsByTagName('form')[0];
+    // const inpName = document.querySelector('#inpName');
+    // const checkName = document.querySelector('#check-name');
+    // const inpImg = document.querySelector('#inpImg');
+    // const checkImg = document.querySelector('#check-img');
+    // const arr_alow_type = ["image/png", "image/jpeg"]
+    // form.addEventListener('submit', function(e) {
+    //     if (inpName.value == "") {
+    //         checkName.style.display = "block";
+    //         e.preventDefault();
+    //     }
+    //     if (inpImg.files.length) {
+    //         let validate_img = "";
+    //         if (!arr_alow_type.includes(inpImg.files[0].type)) {
+    //             validate_img = "File gửi lên sai định dạng  ";
+    //         }
+    //         if (inpImg.files[0] > 1024000) {
+    //             validate_img += "File ảnh vượt quá 10mb";
+    //         }
+    //         if (validate_img != "") {
+    //             checkImg.textContent = validate_img;
+    //             checkImg.style.display = "block";
+    //             e.preventDefault();
+    //         }
+    //     }
+    // })
 </script>
 @endsection

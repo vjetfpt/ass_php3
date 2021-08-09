@@ -2,7 +2,7 @@
     <div class='container hidden-xs'>
         <div class='row'>
             <div class='col-sm-2'>
-                <div id='container-logo'> <a href='index.html'><img src='client/image/catalog/logo/logo.png' alt='ETravel Tours' class='img-responsive' id='logo' /></a> </div>
+                <div id='container-logo'> <a href='index.html'><img src='/client/image/catalog/logo/logo.png' alt='ETravel Tours' class='img-responsive' id='logo' /></a> </div>
             </div>
             <div class='col-sm-8'>
                 <div class='row'>
@@ -47,7 +47,7 @@
             <div class='col-xs-4'>
                 <div id='container-logo-mobile'>
                     <a href='index.html'>
-                        <img src='client/image/catalog/logo/logo.png' alt='ETravel Tours - Đi để trải nghiệm ' class='img-responsive' id='logo' />
+                        <img src='/client/image/catalog/logo/logo.png' alt='ETravel Tours - Đi để trải nghiệm ' class='img-responsive' id='logo' />
                     </a>
                 </div>
             </div>

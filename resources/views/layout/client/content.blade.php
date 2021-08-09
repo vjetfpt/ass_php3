@@ -1,6 +1,6 @@
 <div id="module_gallery-0" class="module_gallery owl-carousel owl-theme">
-    <div> <a href="#"> <img src="client/image/cache/catalog/slider/slider_2-1347x518.jpg" alt="" class="img-responsive" /></a> </div>
-    <div> <a href="#"> <img src="client/image/cache/catalog/slider/slider_1-1347x518.jpg" alt="" class="img-responsive" /></a> </div>
+    <div> <a href="#"> <img src="/client/image/cache/catalog/slider/slider_2-1347x518.jpg" alt="" class="img-responsive" /></a> </div>
+    <div> <a href="#"> <img src="/client/image/cache/catalog/slider/slider_1-1347x518.jpg" alt="" class="img-responsive" /></a> </div>
 </div>
 <script>
     $(document).ready(function() {
@@ -18,28 +18,28 @@
     <h3 class="heading-title">Dịch vụ tốt nhất của ETravel Tours</h3>
     <div class="container">
         <div class="col-sm-4 col-xs-12">
-            <div class="cat-image"> <a href="tour-chau-au.html"> <img src="client/image/cache/catalog/categories/home-cis01-600x400.jpg" alt="Tour Châu Âu" class="img-responsive" /></a> </div>
+            <div class="cat-image"> <a href="tour-chau-au.html"> <img src="/client/image/cache/catalog/categories/home-cis01-600x400.jpg" alt="Tour Châu Âu" class="img-responsive" /></a> </div>
             <div class="cat-name"> <a href="tour-chau-au.html">Tour Châu Âu</a> </div>
         </div>
         <div class="col-sm-4 col-xs-12">
-            <div class="cat-image"> <a href="tour-chau-a.html"> <img src="client/image/cache/catalog/categories/home-cis02-600x400.jpg" alt="Tour Châu Á" class="img-responsive" /></a> </div>
+            <div class="cat-image"> <a href="tour-chau-a.html"> <img src="/client/image/cache/catalog/categories/home-cis02-600x400.jpg" alt="Tour Châu Á" class="img-responsive" /></a> </div>
             <div class="cat-name"> <a href="tour-chau-a.html">Tour Châu Á</a> </div>
         </div>
         <div class="col-sm-4 col-xs-12">
-            <div class="cat-image"> <a href="tour-chau-my.html"> <img src="client/image/cache/catalog/categories/home-cis03-600x400.jpg" alt="Tour Châu Mỹ" class="img-responsive" /></a> </div>
+            <div class="cat-image"> <a href="tour-chau-my.html"> <img src="/client/image/cache/catalog/categories/home-cis03-600x400.jpg" alt="Tour Châu Mỹ" class="img-responsive" /></a> </div>
             <div class="cat-name"> <a href="tour-chau-my.html">Tour Châu Mỹ</a> </div>
         </div>
         <div class="clearfix"></div>
     </div>
 </div>
-<div class="tour-home product_module product_mostviewed" id="product_mostviewed-0" style="background-image: url('client/image/catalog/banner/home-customer-bg.jpg')">
+<div class="tour-home product_module product_mostviewed" id="product_mostviewed-0" style="background-image: url('/client/image/catalog/banner/home-customer-bg.jpg')">
     <div class="container">
         <h3 class="text-center heading-title">Tour du lịch Châu Âu khuyến mãi - hot</h3>
         <div class="container">
             <div class="owl-carousel owl-theme new_by_catnew0">
                 <div class="item" style="padding: 20px;">
                     <div class="tour-border">
-                        <div class="tour-image"> <a href="tour-thai-lan-bangkok-pattaya-trong-5-ngay-4-dem.html" title="Tour Thái Lan - Bangkok - Pattaya Trong 5 Ngày 4 Đêm"> <img src="client/image/cache/catalog/news/1d_1514539618-500x400.jpg" class="img-responsive" alt="Tour Thái Lan - Bangkok - Pattaya Trong 5 Ngày 4 Đêm" /> </a>
+                        <div class="tour-image"> <a href="tour-thai-lan-bangkok-pattaya-trong-5-ngay-4-dem.html" title="Tour Thái Lan - Bangkok - Pattaya Trong 5 Ngày 4 Đêm"> <img src="/client/image/cache/catalog/news/1d_1514539618-500x400.jpg" class="img-responsive" alt="Tour Thái Lan - Bangkok - Pattaya Trong 5 Ngày 4 Đêm" /> </a>
                             <div class="cover"> <a href="tour-thai-lan-bangkok-pattaya-trong-5-ngay-4-dem.html">Xem</a> </div>
                         </div>
                         <div class="tour-info">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="item" style="padding: 20px;">
                     <div class="tour-border">
-                        <div class="tour-image"> <a href="tour-scotland-anh-quoc.html" title="Tour Scotland - Anh Quốc"> <img src="client/image/cache/catalog/news/bruges-500x400.png" class="img-responsive" alt="Tour Scotland - Anh Quốc" /> </a>
+                        <div class="tour-image"> <a href="tour-scotland-anh-quoc.html" title="Tour Scotland - Anh Quốc"> <img src="/client/image/cache/catalog/news/bruges-500x400.png" class="img-responsive" alt="Tour Scotland - Anh Quốc" /> </a>
                             <div class="cover"> <a href="tour-scotland-anh-quoc.html">Xem</a> </div>
                         </div>
                         <div class="tour-info">
@@ -67,7 +67,7 @@
                 </div>
                 <div class="item" style="padding: 20px;">
                     <div class="tour-border">
-                        <div class="tour-image"> <a href="tour-du-lich-singapore-4-ngay-3-dem-khoi-hanh-tu-ha-noi.html" title="Tour Du Lịch Singapore 4 Ngày 3 Đêm - Khởi Hành Từ Hà Nội"> <img src="client/image/cache/catalog/news/thanhhuong-182623042608-binh-minh-Angkor-Wat-500x400.jpg" class="img-responsive" alt="Tour Du Lịch Singapore 4 Ngày 3 Đêm - Khởi Hành Từ Hà Nội" /> </a>
+                        <div class="tour-image"> <a href="tour-du-lich-singapore-4-ngay-3-dem-khoi-hanh-tu-ha-noi.html" title="Tour Du Lịch Singapore 4 Ngày 3 Đêm - Khởi Hành Từ Hà Nội"> <img src="/client/image/cache/catalog/news/thanhhuong-182623042608-binh-minh-Angkor-Wat-500x400.jpg" class="img-responsive" alt="Tour Du Lịch Singapore 4 Ngày 3 Đêm - Khởi Hành Từ Hà Nội" /> </a>
                             <div class="cover"> <a href="tour-du-lich-singapore-4-ngay-3-dem-khoi-hanh-tu-ha-noi.html">Xem</a>
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="item" style="padding: 20px;">
                     <div class="tour-border">
-                        <div class="tour-image"> <a href="tour-du-lich-hy-lap-kham-pha-athens-santorini-2019.html" title="Tour du lịch Hy Lạp khám phá Athens - Santorini 2019"> <img src="client/image/cache/catalog/news/co-nen-di-tour-hy-lap-500x400.jpg" class="img-responsive" alt="Tour du lịch Hy Lạp khám phá Athens - Santorini 2019" /> </a>
+                        <div class="tour-image"> <a href="tour-du-lich-hy-lap-kham-pha-athens-santorini-2019.html" title="Tour du lịch Hy Lạp khám phá Athens - Santorini 2019"> <img src="/client/image/cache/catalog/news/co-nen-di-tour-hy-lap-500x400.jpg" class="img-responsive" alt="Tour du lịch Hy Lạp khám phá Athens - Santorini 2019" /> </a>
                             <div class="cover"> <a href="tour-du-lich-hy-lap-kham-pha-athens-santorini-2019.html">Xem</a> </div>
                         </div>
                         <div class="tour-info">
@@ -96,7 +96,7 @@
                 </div>
                 <div class="item" style="padding: 20px;">
                     <div class="tour-border">
-                        <div class="tour-image"> <a href="tour-du-lich-bo-tay-nuoc-my-8-ngay-tu-ha-noi-2019.html" title="Tour du lịch bờ Tây nước Mỹ 8 ngày từ Hà Nội 2019"> <img src="client/image/cache/catalog/news/tour-usa-gia-re-500x400.jpg" class="img-responsive" alt="Tour du lịch bờ Tây nước Mỹ 8 ngày từ Hà Nội 2019" /> </a>
+                        <div class="tour-image"> <a href="tour-du-lich-bo-tay-nuoc-my-8-ngay-tu-ha-noi-2019.html" title="Tour du lịch bờ Tây nước Mỹ 8 ngày từ Hà Nội 2019"> <img src="/client/image/cache/catalog/news/tour-usa-gia-re-500x400.jpg" class="img-responsive" alt="Tour du lịch bờ Tây nước Mỹ 8 ngày từ Hà Nội 2019" /> </a>
                             <div class="cover"> <a href="tour-du-lich-bo-tay-nuoc-my-8-ngay-tu-ha-noi-2019.html">Xem</a> </div>
                         </div>
                         <div class="tour-info">
@@ -110,7 +110,7 @@
                 </div>
                 <div class="item" style="padding: 20px;">
                     <div class="tour-border">
-                        <div class="tour-image"> <a href="tour-bac-au-dan-mach-na-uy-thuy-dien-phan-lan-2019.html" title="Tour Bắc Âu: Đan Mạch - Na Uy - Thụy Điển - Phần Lan 2019"> <img src="client/image/cache/catalog/news/duc2-500x400.jpg" class="img-responsive" alt="Tour Bắc Âu: Đan Mạch - Na Uy - Thụy Điển - Phần Lan 2019" /> </a>
+                        <div class="tour-image"> <a href="tour-bac-au-dan-mach-na-uy-thuy-dien-phan-lan-2019.html" title="Tour Bắc Âu: Đan Mạch - Na Uy - Thụy Điển - Phần Lan 2019"> <img src="/client/image/cache/catalog/news/duc2-500x400.jpg" class="img-responsive" alt="Tour Bắc Âu: Đan Mạch - Na Uy - Thụy Điển - Phần Lan 2019" /> </a>
                             <div class="cover"> <a href="tour-bac-au-dan-mach-na-uy-thuy-dien-phan-lan-2019.html">Xem</a> </div>
                         </div>
                         <div class="tour-info">
@@ -124,7 +124,7 @@
                 </div>
                 <div class="item" style="padding: 20px;">
                     <div class="tour-border">
-                        <div class="tour-image"> <a href="lac-loi-o-dai-bac-trong-3-ngay-2-dem-ban-muon-thu-khong.html" title="Lạc Lối Ở Đài Bắc Trong 3 Ngày 2 Đêm - Bạn Muốn Thử Không?"> <img src="client/image/cache/catalog/news/kaohug3-500x400.jpg" class="img-responsive" alt="Lạc Lối Ở Đài Bắc Trong 3 Ngày 2 Đêm - Bạn Muốn Thử Không?" /> </a>
+                        <div class="tour-image"> <a href="lac-loi-o-dai-bac-trong-3-ngay-2-dem-ban-muon-thu-khong.html" title="Lạc Lối Ở Đài Bắc Trong 3 Ngày 2 Đêm - Bạn Muốn Thử Không?"> <img src="/client/image/cache/catalog/news/kaohug3-500x400.jpg" class="img-responsive" alt="Lạc Lối Ở Đài Bắc Trong 3 Ngày 2 Đêm - Bạn Muốn Thử Không?" /> </a>
                             <div class="cover"> <a href="lac-loi-o-dai-bac-trong-3-ngay-2-dem-ban-muon-thu-khong.html">Xem</a>
                             </div>
                         </div>
@@ -139,7 +139,7 @@
                 </div>
                 <div class="item" style="padding: 20px;">
                     <div class="tour-border">
-                        <div class="tour-image"> <a href="kham-pha-dat-nuoc-cuba-co-kinh.html" title="Khám phá đất nước Cuba cổ kính"> <img src="client/image/cache/catalog/news/du-lich-lien-tuyen-chau-my-kham-pha-dat-nuoc-cuba-co-kinh-220201740203PM-500x400.jpg" class="img-responsive" alt="Khám phá đất nước Cuba cổ kính" /> </a>
+                        <div class="tour-image"> <a href="kham-pha-dat-nuoc-cuba-co-kinh.html" title="Khám phá đất nước Cuba cổ kính"> <img src="/client/image/cache/catalog/news/du-lich-lien-tuyen-chau-my-kham-pha-dat-nuoc-cuba-co-kinh-220201740203PM-500x400.jpg" class="img-responsive" alt="Khám phá đất nước Cuba cổ kính" /> </a>
                             <div class="cover"> <a href="kham-pha-dat-nuoc-cuba-co-kinh.html">Xem</a> </div>
                         </div>
                         <div class="tour-info">
@@ -153,7 +153,7 @@
                 </div>
                 <div class="item" style="padding: 20px;">
                     <div class="tour-border">
-                        <div class="tour-image"> <a href="du-lich-dong-tay-canada-10-ngay-tu-ha-noi-nam-2019.html" title="Du lịch Đông Tây Canada 10 ngày từ Hà Nội năm 2019"> <img src="client/image/cache/catalog/news/ottawai-photo-500x400.jpg" class="img-responsive" alt="Du lịch Đông Tây Canada 10 ngày từ Hà Nội năm 2019" /> </a>
+                        <div class="tour-image"> <a href="du-lich-dong-tay-canada-10-ngay-tu-ha-noi-nam-2019.html" title="Du lịch Đông Tây Canada 10 ngày từ Hà Nội năm 2019"> <img src="/client/image/cache/catalog/news/ottawai-photo-500x400.jpg" class="img-responsive" alt="Du lịch Đông Tây Canada 10 ngày từ Hà Nội năm 2019" /> </a>
                             <div class="cover"> <a href="du-lich-dong-tay-canada-10-ngay-tu-ha-noi-nam-2019.html">Xem</a> </div>
                         </div>
                         <div class="tour-info">
@@ -167,7 +167,7 @@
                 </div>
                 <div class="item" style="padding: 20px;">
                     <div class="tour-border">
-                        <div class="tour-image"> <a href="du-lich-chau-au-y-thuy-si-phap.html" title="Du lịch Châu Âu (Ý - Thụy Sĩ - Pháp)"> <img src="client/image/cache/catalog/news/du-lich-phap-y-thuy-si-500x400.jpg" class="img-responsive" alt="Du lịch Châu Âu (Ý - Thụy Sĩ - Pháp)" /> </a>
+                        <div class="tour-image"> <a href="du-lich-chau-au-y-thuy-si-phap.html" title="Du lịch Châu Âu (Ý - Thụy Sĩ - Pháp)"> <img src="/client/image/cache/catalog/news/du-lich-phap-y-thuy-si-500x400.jpg" class="img-responsive" alt="Du lịch Châu Âu (Ý - Thụy Sĩ - Pháp)" /> </a>
                             <div class="cover"> <a href="du-lich-chau-au-y-thuy-si-phap.html">Xem</a> </div>
                         </div>
                         <div class="tour-info">
@@ -213,7 +213,7 @@
 <div class="container why-us banner-vi_sao_chon " id="banner-vi_sao_chon-0">
     <h3 class="heading-title">Vì sao chọn tour Châu Âu - ETravel Tour</h3>
     <div class="row">
-        <div class="col-sm-6"> <img src="client/image/cache/catalog/banner/why-feature-555x302.jpg" alt="Vì sao chọn tour Châu Âu - ETravel Tour" class="img-responsive" /> </div>
+        <div class="col-sm-6"> <img src="/client/image/cache/catalog/banner/why-feature-555x302.jpg" alt="Vì sao chọn tour Châu Âu - ETravel Tour" class="img-responsive" /> </div>
         <div class="col-sm-6 text">
             <p>Tận t&acirc;m, am hiểu, chuy&ecirc;n nghiệp<br />Với sự tận t&acirc;m, am hiểu, chuy&ecirc;n nghiệp,
                 qu&yacute; kh&aacute;ch lu&ocirc;n c&oacute; được h&agrave;nh tr&igrave;nh tốt nhất, ph&ugrave; hợp
@@ -226,7 +226,7 @@
         </div>
     </div>
 </div>
-<div class="feedback" id="feedback-0" style="background-image: url('client/image/catalog/banner/home-customer-bg.jpg')">
+<div class="feedback" id="feedback-0" style="background-image: url('/client/image/catalog/banner/home-customer-bg.jpg')">
     <h3 class="text-center heading-title">Phản hồi của khách hàng</h3>
     <div class="container">
         <div class="owl-carousel owl-theme feedback0">
@@ -238,7 +238,7 @@
                     rộng đc thị trường du lịch Châu Âu cho du khách Việt... </div>
                 <div class="row">
                     <div class="col-sm-3 col-xs-3">
-                        <div class="feedback-image"> <img src="client/image/cache/catalog/banner/testimonial_1-250x250.jpg" alt="Hoàng Hùng" class="img-responsive img-circle" /></div>
+                        <div class="feedback-image"> <img src="/client/image/cache/catalog/banner/testimonial_1-250x250.jpg" alt="Hoàng Hùng" class="img-responsive img-circle" /></div>
                     </div>
                     <div class="col-sm-9 col-xs-9">
                         <div class="feedback-customer">Hoàng Hùng</div>
@@ -254,7 +254,7 @@
                     kiện ăn, ngủ….”</div>
                 <div class="row">
                     <div class="col-sm-3 col-xs-3">
-                        <div class="feedback-image"> <img src="client/image/cache/catalog/banner/testimonial_2-250x250.jpg" alt="Nguyễn Ngọc Mai" class="img-responsive img-circle" /></div>
+                        <div class="feedback-image"> <img src="/client/image/cache/catalog/banner/testimonial_2-250x250.jpg" alt="Nguyễn Ngọc Mai" class="img-responsive img-circle" /></div>
                     </div>
                     <div class="col-sm-9 col-xs-9">
                         <div class="feedback-customer">Nguyễn Ngọc Mai</div>
@@ -270,7 +270,7 @@
                     dẫn viên Đạt và ETravel Tours trong thời gian sắp tới.”</div>
                 <div class="row">
                     <div class="col-sm-3 col-xs-3">
-                        <div class="feedback-image"> <img src="client/image/cache/catalog/banner/testimonial_3-250x250.jpg" alt="Phùng Ngọc" class="img-responsive img-circle" /></div>
+                        <div class="feedback-image"> <img src="/client/image/cache/catalog/banner/testimonial_3-250x250.jpg" alt="Phùng Ngọc" class="img-responsive img-circle" /></div>
                     </div>
                     <div class="col-sm-9 col-xs-9">
                         <div class="feedback-customer">Phùng Ngọc</div>
@@ -287,7 +287,7 @@
                     khác.”</div>
                 <div class="row">
                     <div class="col-sm-3 col-xs-3">
-                        <div class="feedback-image"> <img src="client/image/cache/catalog/banner/testimonial_1-250x250.jpg" alt="Trần Hiếu" class="img-responsive img-circle" /></div>
+                        <div class="feedback-image"> <img src="/client/image/cache/catalog/banner/testimonial_1-250x250.jpg" alt="Trần Hiếu" class="img-responsive img-circle" /></div>
                     </div>
                     <div class="col-sm-9 col-xs-9">
                         <div class="feedback-customer">Trần Hiếu</div>
@@ -304,7 +304,7 @@
                     gần gũi...”</div>
                 <div class="row">
                     <div class="col-sm-3 col-xs-3">
-                        <div class="feedback-image"> <img src="client/image/cache/catalog/banner/testimonial_2-250x250.jpg" alt="Ngọc Châm" class="img-responsive img-circle" /></div>
+                        <div class="feedback-image"> <img src="/client/image/cache/catalog/banner/testimonial_2-250x250.jpg" alt="Ngọc Châm" class="img-responsive img-circle" /></div>
                     </div>
                     <div class="col-sm-9 col-xs-9">
                         <div class="feedback-customer">Ngọc Châm</div>
@@ -320,7 +320,7 @@
                     có nhiều kỷ niệm đẹp trong chuyến đi này. Xin chúc Quý công ty du lịch luôn phát triển!”</div>
                 <div class="row">
                     <div class="col-sm-3 col-xs-3">
-                        <div class="feedback-image"> <img src="client/image/cache/catalog/banner/testimonial_3-250x250.jpg" alt="Hoàng Hùng" class="img-responsive img-circle" /></div>
+                        <div class="feedback-image"> <img src="/client/image/cache/catalog/banner/testimonial_3-250x250.jpg" alt="Hoàng Hùng" class="img-responsive img-circle" /></div>
                     </div>
                     <div class="col-sm-9 col-xs-9">
                         <div class="feedback-customer">Hoàng Hùng</div>
@@ -336,7 +336,7 @@
                     đồng hành trong những chuyến đi mới tiếp theo.”</div>
                 <div class="row">
                     <div class="col-sm-3 col-xs-3">
-                        <div class="feedback-image"> <img src="client/image/cache/catalog/banner/testimonial_2-250x250.jpg" alt="Nguyễn Thị Mai" class="img-responsive img-circle" /></div>
+                        <div class="feedback-image"> <img src="/client/image/cache/catalog/banner/testimonial_2-250x250.jpg" alt="Nguyễn Thị Mai" class="img-responsive img-circle" /></div>
                     </div>
                     <div class="col-sm-9 col-xs-9">
                         <div class="feedback-customer">Nguyễn Thị Mai</div>
@@ -379,7 +379,7 @@
     <div class="container">
         <div class="owl-carousel owl-theme">
             <div class="item text-center">
-                <div class="staff-image"> <img alt="Hoàng Hùng" src="client/image/cache/catalog/banner/kh-300x300.jpg" class="img-responsive img-circle" /></div>
+                <div class="staff-image"> <img alt="Hoàng Hùng" src="/client/image/cache/catalog/banner/kh-300x300.jpg" class="img-responsive img-circle" /></div>
                 <div class="staff-name">Hoàng Hùng</div>
                 <div class="staff-job"></div>
                 <div class="staff-info">
@@ -389,7 +389,7 @@
                 </div>
             </div>
             <div class="item text-center">
-                <div class="staff-image"> <img alt="Thu Huyền" src="client/image/cache/catalog/banner/kh5-300x300.jpg" class="img-responsive img-circle" /></div>
+                <div class="staff-image"> <img alt="Thu Huyền" src="/client/image/cache/catalog/banner/kh5-300x300.jpg" class="img-responsive img-circle" /></div>
                 <div class="staff-name">Thu Huyền</div>
                 <div class="staff-job"></div>
                 <div class="staff-info">
@@ -400,7 +400,7 @@
                 </div>
             </div>
             <div class="item text-center">
-                <div class="staff-image"> <img alt="Phùng Huy" src="client/image/cache/catalog/banner/kh1-300x300.jpg" class="img-responsive img-circle" /></div>
+                <div class="staff-image"> <img alt="Phùng Huy" src="/client/image/cache/catalog/banner/kh1-300x300.jpg" class="img-responsive img-circle" /></div>
                 <div class="staff-name">Phùng Huy</div>
                 <div class="staff-job"></div>
                 <div class="staff-info">
@@ -409,7 +409,7 @@
                 </div>
             </div>
             <div class="item text-center">
-                <div class="staff-image"> <img alt="Minh Ngọc" src="client/image/cache/catalog/banner/kh2-300x300.jpg" class="img-responsive img-circle" /></div>
+                <div class="staff-image"> <img alt="Minh Ngọc" src="/client/image/cache/catalog/banner/kh2-300x300.jpg" class="img-responsive img-circle" /></div>
                 <div class="staff-name">Minh Ngọc</div>
                 <div class="staff-job"></div>
                 <div class="staff-info">
@@ -419,7 +419,7 @@
                 </div>
             </div>
             <div class="item text-center">
-                <div class="staff-image"> <img alt="Thu Hương" src="client/image/cache/catalog/banner/nv3-300x300.jpg" class="img-responsive img-circle" /></div>
+                <div class="staff-image"> <img alt="Thu Hương" src="/client/image/cache/catalog/banner/nv3-300x300.jpg" class="img-responsive img-circle" /></div>
                 <div class="staff-name">Thu Hương</div>
                 <div class="staff-job"></div>
                 <div class="staff-info">
@@ -429,7 +429,7 @@
                 </div>
             </div>
             <div class="item text-center">
-                <div class="staff-image"> <img alt="Phùng Trang" src="client/image/cache/catalog/banner/nv-300x300.jpg" class="img-responsive img-circle" /></div>
+                <div class="staff-image"> <img alt="Phùng Trang" src="/client/image/cache/catalog/banner/nv-300x300.jpg" class="img-responsive img-circle" /></div>
                 <div class="staff-name">Phùng Trang</div>
                 <div class="staff-job"></div>
                 <div class="staff-info">
@@ -471,17 +471,17 @@
     <h3 class="text-center heading-title">Blog - Cẩm nang du lịch Châu Âu</h3>
     <div class="">
         <div class="row">
-            <div class="col-sm-4 col-xs-12" style="margin-bottom: 10px;"> <a href="du-lich-bui-chau-a-nen-di-dau.html" title="Du lịch bụi châu Á nên đi đâu?"> <img src="client/image/cache/catalog/news/DU_LICH_BUI_CHAU_A_NEN_DI_DAU_1-360x250.jpg" alt="Du lịch bụi châu Á nên đi đâu?" class="new-home-image img-responsive" /> </a>
+            <div class="col-sm-4 col-xs-12" style="margin-bottom: 10px;"> <a href="du-lich-bui-chau-a-nen-di-dau.html" title="Du lịch bụi châu Á nên đi đâu?"> <img src="/client/image/cache/catalog/news/DU_LICH_BUI_CHAU_A_NEN_DI_DAU_1-360x250.jpg" alt="Du lịch bụi châu Á nên đi đâu?" class="new-home-image img-responsive" /> </a>
                 <h4> <a href="du-lich-bui-chau-a-nen-di-dau.html" title="Du lịch bụi châu Á nên đi đâu?">Du lịch bụi
                         châu Á nên đi đâu?</a> </h4>
                 <p class="new-home-description"></p>
             </div>
-            <div class="col-sm-4 col-xs-12" style="margin-bottom: 10px;"> <a href="mot-so-thu-tuc-can-thiet-khi-xin-visa-du-lich-chau-au.html" title="Một số thủ tục cần thiết khi xin visa du lịch châu Âu"> <img src="client/image/cache/catalog/news/kinh-nghiem-xin-visa-du-lich-chau-au-1216201542340PM-360x250.jpg" alt="Một số thủ tục cần thiết khi xin visa du lịch châu Âu" class="new-home-image img-responsive" /> </a>
+            <div class="col-sm-4 col-xs-12" style="margin-bottom: 10px;"> <a href="mot-so-thu-tuc-can-thiet-khi-xin-visa-du-lich-chau-au.html" title="Một số thủ tục cần thiết khi xin visa du lịch châu Âu"> <img src="/client/image/cache/catalog/news/kinh-nghiem-xin-visa-du-lich-chau-au-1216201542340PM-360x250.jpg" alt="Một số thủ tục cần thiết khi xin visa du lịch châu Âu" class="new-home-image img-responsive" /> </a>
                 <h4> <a href="mot-so-thu-tuc-can-thiet-khi-xin-visa-du-lich-chau-au.html" title="Một số thủ tục cần thiết khi xin visa du lịch châu Âu">Một số thủ tục cần thiết khi
                         xin visa du lịch châu Âu</a> </h4>
                 <p class="new-home-description"></p>
             </div>
-            <div class="col-sm-4 col-xs-12" style="margin-bottom: 10px;"> <a href="cac-thu-tuc-can-thiet-khi-xin-visa-hoa-ky.html" title="Các thủ tục cần thiết khi xin VISA Hoa Kỳ"> <img src="client/image/cache/catalog/news/washington-dc2-360x250.jpg" alt="Các thủ tục cần thiết khi xin VISA Hoa Kỳ" class="new-home-image img-responsive" />
+            <div class="col-sm-4 col-xs-12" style="margin-bottom: 10px;"> <a href="cac-thu-tuc-can-thiet-khi-xin-visa-hoa-ky.html" title="Các thủ tục cần thiết khi xin VISA Hoa Kỳ"> <img src="/client/image/cache/catalog/news/washington-dc2-360x250.jpg" alt="Các thủ tục cần thiết khi xin VISA Hoa Kỳ" class="new-home-image img-responsive" />
                 </a>
                 <h4> <a href="cac-thu-tuc-can-thiet-khi-xin-visa-hoa-ky.html" title="Các thủ tục cần thiết khi xin VISA Hoa Kỳ">Các thủ tục cần thiết khi xin VISA Hoa
                         Kỳ</a> </h4>
